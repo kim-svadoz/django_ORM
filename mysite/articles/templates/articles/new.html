@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+  new
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'articles:create' %}" method="GET">
+  제목:<input type="text" name="title">
+  내용:<input type="text" name="text">
+  <input type="submit" value="제출">
+</form>
+{% endblock %}
