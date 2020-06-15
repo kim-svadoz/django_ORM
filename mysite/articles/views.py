@@ -16,3 +16,6 @@ def create(request):
         'text' : text
     }
     return render(request, 'articles/create.html', context)
+
+def introduce(request):
+    return render(request, 'articles/introduce.html')
