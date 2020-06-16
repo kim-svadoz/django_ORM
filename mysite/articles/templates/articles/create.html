@@ -5,5 +5,8 @@ create
 {% endblock %}
 
 {% block body %}
+<a href="{% url 'articles:index' %}">index</a>
+<a href="{% url 'articles:new' %}">new</a>
+
 <p>{{ title }}, {{ text }}</p>
 {% endblock %}

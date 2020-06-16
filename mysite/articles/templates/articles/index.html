@@ -1,1 +1,18 @@
-<h1>article - index</h1>
+{% extends 'base.html' %}
+{% block title %}
+index
+{% endblock %}
+
+{% block body %}
+<h1>게시판</h1>
+<hr>
+<a href="{% url 'articles:new' %}">NEW</a>
+
+{% for article in articles %}
+  <a href="{% url 'articles:detail' article.pk %}"><h3>{{article.pk}}번 째 글</h3></a>
+  <h4>{{article.title}}</h4>
+  <h5>{{article.content}}</h5>
+  <hr>
+{% endfor %}
+
+{% endblock %}

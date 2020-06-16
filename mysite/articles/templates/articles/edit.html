@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+  edit
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'articles:update' article.pk %}" method="POST">
+  {% csrf_token %}
+  {{ article.pk }}번 째 글
+  제목 : <input type="text" name="edit_title" value="{{ article.title }}">
+  내용 : <input type="text" name="edit_content" value="{{ article.content }}">
+
+  <input type="submit" value="수정하기">
+</form>
+
+<a href="{% url 'articles:index' %}">[back]</a>
+{% endblock %}
