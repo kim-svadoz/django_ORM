@@ -1,0 +1,14 @@
+{% extends 'form.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="{% url 'jobs:past_life' %}" method="post">
+  {% csrf_token %}
+  <div>
+  {{ form.name|as_crispy_field }}
+</div>
+  
+  <button type="submit" class="btn btn-sucess">Save person</button>
+</form>
+{% endblock %}

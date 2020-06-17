@@ -1,0 +1,7 @@
+{% extends 'form.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h3>{{person.name}}님의 전생은 {{person.past_job}}입니다.</h3>
+{% endblock %}
